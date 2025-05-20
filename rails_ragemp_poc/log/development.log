@@ -1,0 +1,54 @@
+Started GET "/ragemp_poc" for ::1 at 2025-05-20 05:11:08 +0300
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='RailsRagempPoc'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='RailsRagempPoc'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RailsRagempPoc'*/[0m
+Processing by RagempPocController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering ragemp_poc/show.html.erb within layouts/application
+  Rendered ragemp_poc/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 210.5ms | GC: 0.0ms)
+Completed 200 OK in 1860ms (Views: 327.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for ::1 at 2025-05-20 05:11:11 +0300
+Started GET "/assets/application-bfcdf840.js" for ::1 at 2025-05-20 05:11:11 +0300
+Started GET "/assets/turbo.min-1262d735.js" for ::1 at 2025-05-20 05:11:11 +0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for ::1 at 2025-05-20 05:11:11 +0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for ::1 at 2025-05-20 05:11:11 +0300
+Started GET "/assets/controllers/application-3affb389.js" for ::1 at 2025-05-20 05:11:11 +0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for ::1 at 2025-05-20 05:11:11 +0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for ::1 at 2025-05-20 05:11:11 +0300
+Writing application-8b441ae0.css
+Writing application-bfcdf840.js
+Writing controllers/application-3affb389.js
+Writing controllers/hello_controller-708796bd.js
+Writing controllers/index-ee64e1f1.js
+Writing stimulus-autoloader-9d447422.js
+Writing stimulus-importmap-autoloader-64cc03e1.js
+Writing stimulus-loading-1fc53fe7.js
+Writing stimulus-d59b3b7f.js
+Writing stimulus.min-4b1e420e.js
+Writing stimulus.min-2395e199.js.map
+Writing turbo-765c2e69.js
+Writing turbo.min-1262d735.js
+Writing turbo.min-02fd5b81.js.map
+Writing rails-ujs.esm-e925103b.js
+Writing rails-ujs-20eaf715.js
+Started GET "/ragemp_poc" for ::1 at 2025-05-20 05:22:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RailsRagempPoc'*/[0m
+Processing by RagempPocController#show as HTML
+  Rendering public/406-unsupported-browser.html
+  Rendered public/406-unsupported-browser.html (Duration: 1.4ms | GC: 0.0ms)
+Filter chain halted as #<Proc:0x0000016941c6c3b0 C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-8.0.2/lib/action_controller/metal/allow_browser.rb:58 (lambda)> rendered or redirected
+Completed 406 Not Acceptable in 847ms (Views: 26.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/ragemp_poc" for ::1 at 2025-05-20 05:28:24 +0300
+Processing by RagempPocController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering ragemp_poc/show.html.erb within layouts/application
+  Rendered ragemp_poc/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | GC: 0.0ms)
+Completed 200 OK in 473ms (Views: 25.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

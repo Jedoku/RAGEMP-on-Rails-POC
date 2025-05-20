@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rails POC for RAGEMP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(240, 240, 240, 0.8); /* Semi-transparent white background */
+      color: #333;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #5a2d82; /* A purple color */
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #5a2d82;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #7b49aa;
+    }
+    #messageInput {
+      padding: 8px;
+      margin-right: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello from Rails in RAGEMP CEF!</h1>
+  <p>This page is being served by your Ruby on Rails application.</p>
+
+  <hr>
+
+  <input type="text" id="messageInput" placeholder="Enter message for RAGEMP" value="Hello RAGEMP from Rails Page!">
+  <button onclick="sendEventToRagemp()">Send Event to RAGEMP</button>
+
+  <p id="feedback"></p>
+
+  <script type="text/javascript">
+    function sendEventToRagemp() {
+      const inputElement = document.getElementById('messageInput');
+      const message = inputElement.value || "Default message from CEF!";
+      const feedbackElement = document.getElementById('feedback');
+
+      if (typeof mp !== 'undefined') {
+        mp.trigger('cef_event_to_ragemp', message);
+        feedbackElement.textContent = 'Event sent to RAGEMP: ' + message;
+        console.log('Event sent to RAGEMP:', message);
+      } else {
+        feedbackElement.textContent = 'Error: mp object is not defined. Are you running this inside RAGEMP CEF?';
+        console.error('mp object is not defined.');
+        alert('This button is intended to be used within RAGEMP.');
+      }
+    }
+
+    // You can also receive events from RAGEMP if needed
+    // For example, if RAGEMP client script does: uiBrowser.execute("triggerClientEvent('Hello from RAGEMP to CEF!');");
+    // function triggerClientEvent(message) {
+    //   document.getElementById('feedback').textContent = 'Message from RAGEMP: ' + message;
+    // }
+
+    console.log("Rails CEF Page Script Loaded.");
+  </script>
+</body>
+</html>
